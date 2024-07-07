@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group</OriginalElement>
+  <nodes>
+    <node x="190.5" y="997.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_user_permissions</node>
+    <node x="550.5" y="234.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user</node>
+    <node x="1141.0" y="917.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_account</node>
+    <node x="170.0" y="86.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_permission</node>
+    <node x="658.5" y="628.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_wishlistitem</node>
+    <node x="848.5" y="1537.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment_tags</node>
+    <node x="1191.0" y="97.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_accounttype</node>
+    <node x="541.5" y="940.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense</node>
+    <node x="-154.0" y="997.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group_permissions</node>
+    <node x="784.0" y="997.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_usagetag</node>
+    <node x="559.5" y="-154.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_currency</node>
+    <node x="666.0" y="1337.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense_tags</node>
+    <node x="459.5" y="1537.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem_tags</node>
+    <node x="910.5" y="617.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment</node>
+    <node x="421.0" y="628.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem</node>
+    <node x="52.5" y="697.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_groups</node>
+    <node x="27.0" y="349.0">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group</node>
+    <node x="1142.0" y="1268.5">a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_transaction</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_user_permissions" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="65.75" y="-50.5" />
+      <point x="387.75" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_transaction" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_account" relationship="REFERENCES">
+      <point x="0.0" y="-119.5" />
+      <point x="0.0" y="131.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_usagetag" relationship="REFERENCES">
+      <point x="61.25" y="-50.5" />
+      <point x="643.25" y="1308.0" />
+      <point x="842.0" y="1308.0" />
+      <point x="842.0" y="1128.0" />
+      <point x="882.0" y="1128.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="0.0" y="-119.5" />
+      <point x="522.0" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment" relationship="REFERENCES">
+      <point x="76.75" y="-50.5" />
+      <point x="1078.75" y="1508.0" />
+      <point x="1042.0" y="1508.0" />
+      <point x="0.0" y="131.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="0.0" y="-108.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_groups" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group" relationship="REFERENCES">
+      <point x="-44.75" y="-50.5" />
+      <point x="97.25" y="548.0" />
+      <point x="102.0" y="548.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_wishlistitem" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="0.0" y="-119.5" />
+      <point x="762.0" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group_permissions" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group" relationship="REFERENCES">
+      <point x="-58.0" y="-50.5" />
+      <point x="-96.0" y="548.0" />
+      <point x="102.0" y="548.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.budgets_budgetitem" relationship="REFERENCES">
+      <point x="-61.25" y="-50.5" />
+      <point x="520.75" y="1508.0" />
+      <point x="522.0" y="1508.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_user_permissions" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_permission" relationship="REFERENCES">
+      <point x="-65.75" y="-50.5" />
+      <point x="256.25" y="568.0" />
+      <point x="262.0" y="568.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_usagetag" relationship="REFERENCES">
+      <point x="-76.75" y="-50.5" />
+      <point x="925.25" y="1308.0" />
+      <point x="842.0" y="1308.0" />
+      <point x="842.0" y="1128.0" />
+      <point x="882.0" y="1128.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_usagetag" relationship="REFERENCES">
+      <point x="58.0" y="-50.5" />
+      <point x="840.0" y="1308.0" />
+      <point x="842.0" y="1308.0" />
+      <point x="842.0" y="1128.0" />
+      <point x="882.0" y="1128.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_group_permissions" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.auth_permission" relationship="REFERENCES">
+      <point x="58.0" y="-50.5" />
+      <point x="20.0" y="568.0" />
+      <point x="262.0" y="568.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_account" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_accounttype" relationship="REFERENCES">
+      <point x="60.5" y="-131.0" />
+      <point x="1322.5" y="888.0" />
+      <point x="1282.0" y="888.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_currency" relationship="REFERENCES">
+      <point x="0.0" y="-154.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user_groups" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="44.75" y="-50.5" />
+      <point x="186.75" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_recurringpayment" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="0.0" y="-131.0" />
+      <point x="1042.0" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_account" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.core_user" relationship="REFERENCES">
+      <point x="-60.5" y="-131.0" />
+      <point x="1201.5" y="588.0" />
+      <point x="642.0" y="588.0" />
+      <point x="0.0" y="154.0" />
+    </edge>
+    <edge source="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense_tags" target="a61b45f2-b152-4bf8-b29c-fc32c545462a.TABLE:tyne_finance.expenses_expense" relationship="REFERENCES">
+      <point x="-58.0" y="-50.5" />
+      <point x="724.0" y="1288.0" />
+      <point x="642.0" y="1288.0" />
+      <point x="0.0" y="108.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.89145666712631" showDependencies="false" x="449.8735927492447" y="930.3024" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

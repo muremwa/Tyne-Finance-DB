@@ -1,5 +1,3 @@
-# Auto generated
-
 create table auth_group
 (
     id   int auto_increment
@@ -130,6 +128,16 @@ create table core_user_groups
         foreign key (user_id) references core_user (id)
 );
 
+create table django_content_type
+(
+    id        int auto_increment
+        primary key,
+    app_label varchar(100) not null,
+    model     varchar(100) not null,
+    constraint django_content_type_app_label_model_76bd3d3b_uniq
+        unique (app_label, model)
+);
+
 create table auth_permission
 (
     id              int auto_increment
@@ -138,7 +146,9 @@ create table auth_permission
     content_type_id int          not null,
     codename        varchar(100) not null,
     constraint auth_permission_content_type_id_codename_01ab375a_uniq
-        unique (content_type_id, codename)
+        unique (content_type_id, codename),
+    constraint auth_permission_content_type_id_2f476e4b_fk_django_co
+        foreign key (content_type_id) references django_content_type (id)
 );
 
 create table auth_group_permissions
@@ -169,35 +179,72 @@ create table core_user_user_permissions
         foreign key (user_id) references core_user (id)
 );
 
+create table django_admin_log
+(
+    id              int auto_increment
+        primary key,
+    action_time     datetime(6)       not null,
+    object_id       longtext          null,
+    object_repr     varchar(200)      not null,
+    action_flag     smallint unsigned not null,
+    change_message  longtext          not null,
+    content_type_id int               null,
+    user_id         bigint            not null,
+    constraint django_admin_log_content_type_id_c4bce8eb_fk_django_co
+        foreign key (content_type_id) references django_content_type (id),
+    constraint django_admin_log_user_id_c564eba6_fk_core_user_id
+        foreign key (user_id) references core_user (id),
+    check (`action_flag` >= 0)
+);
+
+create table django_migrations
+(
+    id      bigint auto_increment
+        primary key,
+    app     varchar(255) not null,
+    name    varchar(255) not null,
+    applied datetime(6)  not null
+);
+
+create table django_session
+(
+    session_key  varchar(40) not null
+        primary key,
+    session_data longtext    not null,
+    expire_date  datetime(6) not null
+);
+
+create index django_session_expire_date_a5c62663
+    on django_session (expire_date);
+
 create table expenses_expense
 (
-    id                 bigint auto_increment
+    id            bigint auto_increment
         primary key,
-    planned            tinyint(1)        not null,
-    narration          longtext          not null,
-    amount             int               not null,
-    transaction_charge int               not null,
-    date_created       datetime(6)       not null,
-    date_occurred      date              not null,
-    user_id            bigint default -1 not null,
-    constraint expenses_expense_user_id_to_core_user_id
+    planned       tinyint(1)  not null,
+    narration     longtext    not null,
+    amount        int         not null,
+    date_created  datetime(6) not null,
+    date_occurred date        not null,
+    date_modified datetime(6) not null,
+    user_id       bigint      null,
+    constraint expenses_expense_user_id_ab1aae2b_fk_core_user_id
         foreign key (user_id) references core_user (id)
 );
 
 create table expenses_recurringpayment
 (
-    id                 bigint auto_increment
+    id            bigint auto_increment
         primary key,
-    narration          longtext    not null,
-    amount             int         not null,
-    transaction_charge int         not null,
-    start_date         date        not null,
-    end_date           date        null,
-    renewal_date       varchar(5)  not null,
-    date_added         datetime(6) not null,
-    date_modified      datetime(6) not null,
-    renewal_count      int         not null,
-    user_id            bigint      not null,
+    narration     longtext    not null,
+    amount        int         not null,
+    start_date    date        not null,
+    end_date      date        null,
+    renewal_date  varchar(5)  not null,
+    date_added    datetime(6) not null,
+    date_modified datetime(6) not null,
+    renewal_count int         not null,
+    user_id       bigint      not null,
     constraint expenses_recurringpayment_user_id_62ffa16d_fk_core_user_id
         foreign key (user_id) references core_user (id)
 );
@@ -213,6 +260,7 @@ create table expenses_transaction
     transaction_for    enum ('EX', 'RP') not null,
     transaction_for_id int               null,
     account_id         bigint            not null,
+    transaction_charge int               not null,
     constraint expenses_transaction_account_id_95203b9e_fk_core_account_id
         foreign key (account_id) references core_account (id)
 );
@@ -268,5 +316,4 @@ create table expenses_recurringpayment_tags
     constraint expenses_recurringpa_usagetag_id_7f5b2fd3_fk_expenses_
         foreign key (usagetag_id) references expenses_usagetag (id)
 );
-
 
